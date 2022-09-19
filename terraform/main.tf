@@ -23,5 +23,5 @@ module "sandbox" {
     group = "non-prod"
   }
 
-  account_customizations_name = "DEV-dev1"
+  account_customizations_name = "devone"
 }
