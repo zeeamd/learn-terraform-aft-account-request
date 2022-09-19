@@ -2,12 +2,12 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "zeeshan.ahmed2@citiustech.com"
-    AccountName               = "aft-2-deleteme"
-    ManagedOrganizationalUnit = "aft"
-    SSOUserEmail              = "zeeshan.ahmed2@citiustech.com"
-    SSOUserFirstName          = "zee"
-    SSOUserLastName           = "amd"
+    AccountEmail              = "devacc1909@gmail.com"
+    AccountName               = "dev1"
+    ManagedOrganizationalUnit = "DEV"
+    SSOUserEmail              = "devacc1909@gmail.com"
+    SSOUserFirstName          = "dev"
+    SSOUserLastName           = "acc"
   }
 
   account_tags = {
@@ -23,5 +23,5 @@ module "sandbox" {
     group = "non-prod"
   }
 
-  account_customizations_name = "aft-2-deleteme"
+  account_customizations_name = "DEV-dev1"
 }
