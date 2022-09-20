@@ -15,4 +15,4 @@ table item with your account specifications.
 - The new item in aft-request table will trigger the code pipeline job ct-aft-account-request to provision the new account
 - A DEV OU was created manually for test purpose
 - The DEV OU needs to be registered with AWS Control Tower before use
-- Restored the deleted state file
+- Lookup AWS Control Tower activity to check if account provision request has reached for intitiation
