@@ -14,3 +14,4 @@ table item with your account specifications.
 - As soon as the change is checked in to main branch a new item should appear in AFT account Dynamo DB table aft-request
 - The new item in aft-request table will trigger the code pipeline job ct-aft-account-request to provision the new account
 - A DEV OU was created manually for test purpose
+- The DEV OU needs to be registered with AWS Control Tower before use
