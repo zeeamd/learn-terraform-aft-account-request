@@ -2,10 +2,10 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "devacc2009@gmail.com"
-    AccountName               = "dev-one"
+    AccountEmail              = "devacc9002@gmail.com"
+    AccountName               = "devaccone"
     ManagedOrganizationalUnit = "DEV"
-    SSOUserEmail              = "devacc2009@gmail.com"
+    SSOUserEmail              = "devacc9002@gmail.com"
     SSOUserFirstName          = "dev"
     SSOUserLastName           = "acc"
   }
@@ -23,5 +23,5 @@ module "sandbox" {
     group = "non-prod"
   }
 
-  account_customizations_name = "devone"
+  account_customizations_name = "devaccone"
 }
