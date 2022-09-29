@@ -17,3 +17,5 @@ table item with your account specifications.
 - The DEV OU needs to be registered with AWS Control Tower before use
 - Lookup AWS Control Tower activity to check if account provision request has reached for intitiation
 - The custom fields will be available as SSM parameters in the vended account
+- Edit Network settings in AWS Master Account Factory to deselect all regions and set subnet count to 0 to stop vpc provisioning in the selected region. It still provisions the default vpc in the other regions though
+- It is possible to use same sso email for multiple accounts
