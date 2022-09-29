@@ -12,6 +12,9 @@ module "sandbox" {
 
   account_tags = {
     "Learn Tutorial" = "AFT"
+    "Owner" = "CT2"
+    "Environment" = "DEV"
+    "Cost Center" = "CT"
   }
 
   change_management_parameters = {
@@ -19,9 +22,9 @@ module "sandbox" {
     change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
   }
 
-  custom_fields = {
-    group = "non-prod"
-  }
+#  custom_fields = {
+#    group = "non-prod"
+#  }
 
   account_customizations_name = "devaccone"
 }

@@ -16,3 +16,4 @@ table item with your account specifications.
 - A DEV OU was created manually for test purpose
 - The DEV OU needs to be registered with AWS Control Tower before use
 - Lookup AWS Control Tower activity to check if account provision request has reached for intitiation
+- The custom fields will be available as SSM parameters in the vended account
