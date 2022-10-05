@@ -1,13 +1,14 @@
 module "sandbox" {
+  for_each = var.aft-account-lists
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "devacc9002@gmail.com"
-    AccountName               = "devaccone"
-    ManagedOrganizationalUnit = "DEV"
-    SSOUserEmail              = "devacc9002@gmail.com"
-    SSOUserFirstName          = "dev"
-    SSOUserLastName           = "acc"
+    AccountEmail              = each.value["account_email"]
+    AccountName               = each.value["account_name"]
+    ManagedOrganizationalUnit = each.value["managed_organizational_unit"]
+    SSOUserEmail              = each.value["sso_user_email"]
+    SSOUserFirstName          = each.value["sso_user_first_name"]
+    SSOUserLastName           = each.value["sso_user_last_name"]
   }
 
   account_tags = {
@@ -26,59 +27,5 @@ module "sandbox" {
 #    group = "non-prod"
 #  }
 
-  account_customizations_name = "devaccone"
-}
-
-module "sandbox2" {
-  source = "./modules/aft-account-request"
-
-  control_tower_parameters = {
-    AccountEmail              = "devacc2909@gmail.com"
-    AccountName               = "devacctwo"
-    ManagedOrganizationalUnit = "DEV"
-    SSOUserEmail              = "devacc9002@gmail.com"
-    SSOUserFirstName          = "dev"
-    SSOUserLastName           = "acc"
-  }
-
-  account_tags = {
-    "Learn Tutorial" = "AFT"
-    "Owner" = "CT2"
-    "Environment" = "DEV"
-    "Cost Center" = "CT"
-  }
-
-  change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
-  }
-
-  account_customizations_name = "devacctwo"
-}
-
-module "sandbox3" {
-  source = "./modules/aft-account-request"
-
-  control_tower_parameters = {
-    AccountEmail              = "logacc2022@gmail.com"
-    AccountName               = "Log Archive"
-    ManagedOrganizationalUnit = "Security"
-    SSOUserEmail              = "logacc2022@gmail.com"
-    SSOUserFirstName          = "log"
-    SSOUserLastName           = "acc"
-  }
-
-  account_tags = {
-    "Learn Tutorial" = "AFT"
-    "Owner" = "CT2"
-    "Environment" = "DEV"
-    "Cost Center" = "CT"
-  }
-
-  change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
-  }
-
-  account_customizations_name = "LogArchive"
+  account_customizations_name = each.value["account_customizations_name"]
 }
