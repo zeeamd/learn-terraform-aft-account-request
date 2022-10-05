@@ -55,30 +55,3 @@ module "sandbox2" {
 
   account_customizations_name = "devacctwo"
 }
-
-module "sandbox3" {
-  source = "./modules/aft-account-request"
-
-  control_tower_parameters = {
-    AccountEmail              = "logacc2022@gmail.com"
-    AccountName               = "Log Archive"
-    ManagedOrganizationalUnit = "Security"
-    SSOUserEmail              = "logacc2022@gmail.com"
-    SSOUserFirstName          = "log"
-    SSOUserLastName           = "acc"
-  }
-
-  account_tags = {
-    "Learn Tutorial" = "AFT"
-    "Owner" = "CT2"
-    "Environment" = "DEV"
-    "Cost Center" = "CT"
-  }
-
-  change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
-  }
-
-  account_customizations_name = "LogArchive"
-}
